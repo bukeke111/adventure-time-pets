@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pixel Trio Canvas Sprite Example</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; }
+    body { margin: 2rem; background: #171321; color: #f4efff; }
+    canvas { width: 384px; height: 416px; image-rendering: pixelated; border: 1px solid #5f5272; }
+    .note { max-width: 42rem; color: #c8bfd8; }
+  </style>
+</head>
+<body>
+  <h1>Canvas 精灵图示例</h1>
+  <p class="note">替换图片路径后，Canvas 使用源图中的 192×208 单元格绘制当前帧。</p>
+  <canvas width="192" height="208" aria-label="Pixel Trio sprite cell"></canvas>
+  <script>
+    const canvas = document.querySelector('canvas');
+    const ctx = canvas.getContext('2d');
+    const image = new Image();
+    image.src = '../assets/pixel-trio-spritesheet.png';
+    image.onload = () => {
+      let frame = 0;
+      setInterval(() => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(image, (frame % 6) * 192, 0, 192, 208, 0, 0, 192, 208);
+        frame += 1;
+      }, 160);
+    };
+  </script>
+</body>
+</html>
