@@ -26,7 +26,6 @@ Bring Finn, Jake, and BMO to your coding workspace with expressive frame-by-fram
   <a href="./docs/installation.md">Installation</a>
 </p>
 
-</div>
 
 ## Contents
 
