@@ -1,13 +1,13 @@
 # Installation and local preview
 
-This repository contains documentation, examples, and low-resolution previews. It does not include the complete Finn, Jake, and BMO character atlas.
+This repository contains documentation, examples, a low-resolution GIF, and the complete 1536 × 1872 Finn, Jake, and BMO atlas at `assets/pixel-trio-spritesheet.png`. The atlas is third-party fan artwork.
 
 ## Requirements
 
 - Git
 - Python 3 for the local static server
 - A browser with JavaScript enabled
-- A sprite sheet that you own or have permission to use, if you want to run the examples with character art
+- Permission to use or redistribute the included third-party character artwork in your context
 
 ## Clone the repository
 
@@ -29,11 +29,11 @@ Open these pages in a browser:
 - `http://localhost:8000/examples/css-spritesheet.html`
 - `http://localhost:8000/examples/canvas-spritesheet.html`
 
-The pages reference `assets/pixel-trio-spritesheet.png`. Create the `assets/` directory and place your authorized sprite sheet there, or change the path in the example. The expected v1 atlas size is 1536 × 1872 pixels with 192 × 208 pixel cells.
+The pages reference the included `assets/pixel-trio-spritesheet.png`. Its v1 atlas size is 1536 × 1872 pixels with 192 × 208 pixel cells.
 
-## Preview without a local atlas
+## Preview and asset terms
 
-Open `preview/pixel-trio-idle.gif` or the images in `preview/`. These low-resolution files are included to show the animation concept and the frame layout.
+Open `preview/pixel-trio-idle.gif` for the low-resolution animation preview, or use the full atlas in `assets/` with the examples. Finn, Jake, BMO, and related artwork remain third-party material. The repository's MIT and CC BY licenses do not grant permission to reuse those characters.
 
 ## Connecting another runtime
 
