@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pixel Trio CSS Sprite Example</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; }
+    body { margin: 2rem; background: #171321; color: #f4efff; }
+    .pet { width: 192px; height: 208px; background-image: url('../assets/pixel-trio-spritesheet.png'); background-repeat: no-repeat; background-position: 0 0; image-rendering: pixelated; }
+    .note { max-width: 42rem; color: #c8bfd8; }
+  </style>
+</head>
+<body>
+  <h1>CSS 精灵图示例</h1>
+  <p class="note">把本地精灵图放在 <code>assets/pixel-trio-spritesheet.png</code>，再按列和行更新背景位置。</p>
+  <div class="pet" aria-label="Pixel Trio sprite cell"></div>
+  <script>
+    const cell = document.querySelector('.pet');
+    let frame = 0;
+    setInterval(() => {
+      cell.style.backgroundPosition = `${-(frame % 6) * 192}px 0px`;
+      frame += 1;
+    }, 160);
+  </script>
+</body>
+</html>
