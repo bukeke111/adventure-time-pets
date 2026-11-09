@@ -33,6 +33,7 @@ Bring Finn, Jake, and BMO to your coding workspace with expressive frame-by-fram
 
 - [Features](#features)
 - [Dynamic preview](#dynamic-preview)
+- [Animation gallery](#animation-gallery)
 - [Quick start](#quick-start)
 - [Sprite sheet](#sprite-sheet)
 - [Animation states](#animation-states)
@@ -54,6 +55,28 @@ Bring Finn, Jake, and BMO to your coding workspace with expressive frame-by-fram
 The animated preview shows the six-frame `idle` row at half cell size.
 
 ![Pixel Trio idle animation](./preview/pixel-trio-idle.gif)
+
+## Animation gallery
+
+Each state has its own frame sequence. Open any GIF to inspect the motion at full preview size.
+
+<table>
+  <tr>
+    <td align="center"><strong>idle</strong><br><img src="./preview/states/idle.gif" alt="idle" width="160"><br><sub>6 frames</sub></td>
+    <td align="center"><strong>running-right</strong><br><img src="./preview/states/running-right.gif" alt="running right" width="160"><br><sub>8 frames</sub></td>
+    <td align="center"><strong>running-left</strong><br><img src="./preview/states/running-left.gif" alt="running left" width="160"><br><sub>8 frames</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>waving</strong><br><img src="./preview/states/waving.gif" alt="waving" width="160"><br><sub>4 frames</sub></td>
+    <td align="center"><strong>jumping</strong><br><img src="./preview/states/jumping.gif" alt="jumping" width="160"><br><sub>5 frames</sub></td>
+    <td align="center"><strong>failed</strong><br><img src="./preview/states/failed.gif" alt="failed" width="160"><br><sub>8 frames</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>waiting</strong><br><img src="./preview/states/waiting.gif" alt="waiting" width="160"><br><sub>6 frames</sub></td>
+    <td align="center"><strong>running</strong><br><img src="./preview/states/running.gif" alt="running" width="160"><br><sub>6 frames</sub></td>
+    <td align="center"><strong>review</strong><br><img src="./preview/states/review.gif" alt="review" width="160"><br><sub>6 frames</sub></td>
+  </tr>
+</table>
 
 The complete atlas is available here:
 
@@ -120,7 +143,8 @@ assets/
 └── pixel-trio-spritesheet.png   # Complete v1 atlas
 
 preview/
-└── pixel-trio-idle.gif          # Low-resolution dynamic preview
+├── pixel-trio-idle.gif          # Low-resolution dynamic preview
+└── states/                      # Nine animated state previews
 
 docs/
 ├── animation-states.md
@@ -155,6 +179,7 @@ The complete sprite sheet in `assets/` contains third-party character artwork. T
 - [项目简介](#项目简介)
 - [功能亮点](#功能亮点)
 - [动态演示](#动态演示)
+- [九种动画状态预览](#九种动画状态预览)
 - [快速开始](#快速开始)
 - [精灵图规格](#精灵图规格)
 - [动画状态](#动画状态)
@@ -181,6 +206,20 @@ The complete sprite sheet in `assets/` contains third-party character artwork. T
 动态 GIF 展示 `idle` 待机状态。完整精灵图位于 [assets/pixel-trio-spritesheet.png](./assets/pixel-trio-spritesheet.png)。
 
 ![Pixel Trio 待机动画](./preview/pixel-trio-idle.gif)
+
+## 九种动画状态预览
+
+README 直接展示九种状态的 GIF。对应的帧数和工作流含义见 [动画状态](#动画状态) 与 [docs/animation-states.md](./docs/animation-states.md)。
+
+- [idle](./preview/states/idle.gif)
+- [running-right](./preview/states/running-right.gif)
+- [running-left](./preview/states/running-left.gif)
+- [waving](./preview/states/waving.gif)
+- [jumping](./preview/states/jumping.gif)
+- [failed](./preview/states/failed.gif)
+- [waiting](./preview/states/waiting.gif)
+- [running](./preview/states/running.gif)
+- [review](./preview/states/review.gif)
 
 ## 快速开始
 
@@ -224,7 +263,7 @@ python3 -m http.server 8000
 
 ```text
 assets/                 完整精灵图
-preview/                动态 GIF 预览
+preview/                动态 GIF 预览和九种状态图
 docs/                   布局、安装和动画状态说明
 examples/               CSS 与 Canvas 示例
 ```
