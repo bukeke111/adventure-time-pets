@@ -48,7 +48,7 @@ See [docs/installation.md](./docs/installation.md) for the complete setup. The s
 
 ```bash
 git clone https://github.com/bukeke111/adventure-time-pets.git
-cd codex-adventure-time-pets
+cd adventure-time-pets
 python3 -m http.server 8000
 ```
 
