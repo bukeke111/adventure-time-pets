@@ -15,7 +15,7 @@ Bring Finn, Jake, and BMO to your coding workspace with expressive frame-by-fram
 
 ![Pixel Trio idle animation](./preview/pixel-trio-idle.gif)
 
-The GIF is a low-resolution preview of the idle row. The full character sprite sheet is kept outside this public repository.
+The GIF is a low-resolution preview of the idle row. The complete 1536 × 1872 atlas is available at [`assets/pixel-trio-spritesheet.png`](./assets/pixel-trio-spritesheet.png) for local playback and inspection.
 
 ### Disclaimer
 
@@ -35,6 +35,7 @@ Any license applied to the original source code does not grant permission to reu
 
 ## Repository contents
 
+- `assets/pixel-trio-spritesheet.png` contains the complete 8 × 9 atlas used by the examples.
 - `preview/` contains low-resolution previews, including the animated idle demo.
 - `docs/sprite-layout.md` documents the 8 × 9 sprite atlas layout.
 - `docs/animation-states.md` documents the nine available animation rows and their populated frame counts.
@@ -54,7 +55,7 @@ python3 -m http.server 8000
 
 Then open the CSS or Canvas example at `http://localhost:8000/examples/`.
 
-The examples expect a local file at `assets/pixel-trio-spritesheet.png`. The complete character atlas is not distributed in this repository. Replace that path with a sprite sheet you have permission to use, or use the preview GIF to inspect the published demo.
+The examples use `assets/pixel-trio-spritesheet.png`, which is 1536 × 1872 pixels with 192 × 208 pixel cells. This is third-party fan artwork. Keep the attribution and rights notice when redistributing it, and do not treat the MIT or CC BY licenses in this repository as permission to reuse the Adventure Time characters.
 
 ## Licenses
 
