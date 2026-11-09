@@ -19,3 +19,19 @@ The current Codex pet atlas uses 8 columns and 9 rows. Rows are read from top to
 Use a fixed cell size of 192 × 208 pixels. Advance frames from left to right within one row, then loop the row. Keep the same scale and baseline across frames to avoid visual popping. A state change should switch rows while preserving the current display scale.
 
 The public GIF preview shows the six-frame `idle` row at half cell size. The complete character atlas remains outside the public repository because it contains third-party characters and artwork.
+
+## State previews
+
+Open each GIF to inspect the corresponding sequence:
+
+| State | Preview |
+| --- | --- |
+| `idle` | [idle.gif](../preview/states/idle.gif) |
+| `running-right` | [running-right.gif](../preview/states/running-right.gif) |
+| `running-left` | [running-left.gif](../preview/states/running-left.gif) |
+| `waving` | [waving.gif](../preview/states/waving.gif) |
+| `jumping` | [jumping.gif](../preview/states/jumping.gif) |
+| `failed` | [failed.gif](../preview/states/failed.gif) |
+| `waiting` | [waiting.gif](../preview/states/waiting.gif) |
+| `running` | [running.gif](../preview/states/running.gif) |
+| `review` | [review.gif](../preview/states/review.gif) |
