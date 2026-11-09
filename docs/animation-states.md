@@ -18,7 +18,7 @@ The current Codex pet atlas uses 8 columns and 9 rows. Rows are read from top to
 
 Use a fixed cell size of 192 × 208 pixels. Advance frames from left to right within one row, then loop the row. Keep the same scale and baseline across frames to avoid visual popping. A state change should switch rows while preserving the current display scale.
 
-The public GIF preview shows the six-frame `idle` row at half cell size. The complete character atlas remains outside the public repository because it contains third-party characters and artwork.
+The public GIF preview shows the six-frame `idle` row at half cell size. The complete character atlas is published at `assets/pixel-trio-spritesheet.png`. It contains third-party characters and artwork, so the repository rights notice still applies.
 
 ## State previews
 
