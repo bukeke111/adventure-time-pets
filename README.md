@@ -27,6 +27,8 @@ Bring Finn, Jake, and BMO to your coding workspace with expressive frame-by-fram
 </p>
 
 
+</div>
+
 ## Contents
 
 - [Features](#features)
@@ -241,4 +243,3 @@ Finn、Jake、BMO 和《探险活宝》属于相应权利方。本项目不主�
 
 `assets/` 中的完整精灵图含有第三方角色美术素材。仓库许可证只适用于原创代码和文档，不授予第三方角色或美术素材的再使用、再分发或商业使用许可。分享素材时请保留这段版权说明。
 
-</div>
