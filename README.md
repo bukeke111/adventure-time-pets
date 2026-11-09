@@ -47,7 +47,7 @@ Any license applied to the original source code does not grant permission to reu
 See [docs/installation.md](./docs/installation.md) for the complete setup. The shortest path is:
 
 ```bash
-git clone https://github.com/bukeke111/codex-adventure-time-pets.git
+git clone https://github.com/bukeke111/adventure-time-pets.git
 cd codex-adventure-time-pets
 python3 -m http.server 8000
 ```
