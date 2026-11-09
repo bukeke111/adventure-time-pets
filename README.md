@@ -209,17 +209,27 @@ The complete sprite sheet in `assets/` contains third-party character artwork. T
 
 ## 九种动画状态预览
 
-README 直接展示九种状态的 GIF。对应的帧数和工作流含义见 [动画状态](#动画状态) 与 [docs/animation-states.md](./docs/animation-states.md)。
+以下 GIF 与英文区的动画状态一一对应。点击图片可以打开单独的状态文件。
 
-- [idle](./preview/states/idle.gif)
-- [running-right](./preview/states/running-right.gif)
-- [running-left](./preview/states/running-left.gif)
-- [waving](./preview/states/waving.gif)
-- [jumping](./preview/states/jumping.gif)
-- [failed](./preview/states/failed.gif)
-- [waiting](./preview/states/waiting.gif)
-- [running](./preview/states/running.gif)
-- [review](./preview/states/review.gif)
+<table>
+  <tr>
+    <td align="center"><strong>待机 idle</strong><br><a href="./preview/states/idle.gif"><img src="./preview/states/idle.gif" alt="待机动画" width="160"></a><br><sub>6 帧</sub></td>
+    <td align="center"><strong>向右移动 running-right</strong><br><a href="./preview/states/running-right.gif"><img src="./preview/states/running-right.gif" alt="向右移动动画" width="160"></a><br><sub>8 帧</sub></td>
+    <td align="center"><strong>向左移动 running-left</strong><br><a href="./preview/states/running-left.gif"><img src="./preview/states/running-left.gif" alt="向左移动动画" width="160"></a><br><sub>8 帧</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>挥手 waving</strong><br><a href="./preview/states/waving.gif"><img src="./preview/states/waving.gif" alt="挥手动画" width="160"></a><br><sub>4 帧</sub></td>
+    <td align="center"><strong>跳跃 jumping</strong><br><a href="./preview/states/jumping.gif"><img src="./preview/states/jumping.gif" alt="跳跃动画" width="160"></a><br><sub>5 帧</sub></td>
+    <td align="center"><strong>失败 failed</strong><br><a href="./preview/states/failed.gif"><img src="./preview/states/failed.gif" alt="失败动画" width="160"></a><br><sub>8 帧</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>等待 waiting</strong><br><a href="./preview/states/waiting.gif"><img src="./preview/states/waiting.gif" alt="等待动画" width="160"></a><br><sub>6 帧</sub></td>
+    <td align="center"><strong>运行中 running</strong><br><a href="./preview/states/running.gif"><img src="./preview/states/running.gif" alt="运行中动画" width="160"></a><br><sub>6 帧</sub></td>
+    <td align="center"><strong>审核 review</strong><br><a href="./preview/states/review.gif"><img src="./preview/states/review.gif" alt="审核动画" width="160"></a><br><sub>6 帧</sub></td>
+  </tr>
+</table>
+
+完整帧数和工作流含义见 [动画状态](#动画状态) 与 [docs/animation-states.md](./docs/animation-states.md)。
 
 ## 快速开始
 
