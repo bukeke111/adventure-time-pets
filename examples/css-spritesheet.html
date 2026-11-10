@@ -8,20 +8,42 @@
     :root { color-scheme: dark; font-family: system-ui, sans-serif; }
     body { margin: 2rem; background: #171321; color: #f4efff; }
     .pet { width: 192px; height: 208px; background-image: url('../assets/pixel-trio-spritesheet.png'); background-repeat: no-repeat; background-position: 0 0; image-rendering: pixelated; }
+    .controls { display: flex; flex-wrap: wrap; gap: 0.5rem; max-width: 42rem; }
+    button { border: 1px solid #6d5b85; border-radius: 0.4rem; padding: 0.45rem 0.7rem; background: #2b2138; color: #f4efff; cursor: pointer; }
+    button:hover { background: #3b2b4d; }
     .note { max-width: 42rem; color: #c8bfd8; }
+    #state { color: #c4b5fd; }
   </style>
 </head>
 <body>
   <h1>CSS 精灵图示例</h1>
-  <p class="note">把本地精灵图放在 <code>assets/pixel-trio-spritesheet.png</code>，再按列和行更新背景位置。</p>
+  <p class="note">示例使用每个状态自己的帧数和播放速度。点击按钮可以观察状态切换。</p>
   <div class="pet" aria-label="Pixel Trio sprite cell"></div>
-  <script>
+  <p>当前状态：<strong id="state">idle</strong></p>
+  <div class="controls" aria-label="Animation states"></div>
+  <script type="module">
+    import { animationStates, createSpritePlayer } from './state-player.js';
+
     const cell = document.querySelector('.pet');
-    let frame = 0;
-    setInterval(() => {
-      cell.style.backgroundPosition = `${-(frame % 6) * 192}px 0px`;
-      frame += 1;
-    }, 160);
+    const stateLabel = document.querySelector('#state');
+    const controls = document.querySelector('.controls');
+
+    const player = createSpritePlayer({
+      drawFrame: (state, frame) => {
+        cell.style.backgroundPosition = `${-frame * 192}px ${-state.row * 208}px`;
+      },
+      onStateChange: (state) => {
+        stateLabel.textContent = state;
+      }
+    });
+
+    for (const stateName of Object.keys(animationStates)) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = stateName;
+      button.addEventListener('click', () => player.playTransition(stateName));
+      controls.append(button);
+    }
   </script>
 </body>
 </html>
