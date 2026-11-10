@@ -48,7 +48,7 @@ Bring Finn, Jake, and BMO to your coding workspace with expressive frame-by-fram
 - **Rich sprite animations** — Nine workflow-oriented animation states with populated frame sequences.
 - **Expressive status feedback** — Idle, running, waiting, review, failure, movement, and celebration states.
 - **Codex-friendly atlas** — A fixed 8 × 9 layout with 192 × 208 pixel cells.
-- **Browser examples** — CSS and Canvas examples show how to load and play one row.
+- **Browser examples** — CSS and Canvas examples use state-specific speeds, frame counts, and transition controls.
 
 ## Dynamic preview
 
@@ -153,7 +153,8 @@ docs/
 
 examples/
 ├── canvas-spritesheet.html
-└── css-spritesheet.html
+├── css-spritesheet.html
+└── state-player.js
 ```
 
 ## Licenses
@@ -280,7 +281,7 @@ examples/               CSS 与 Canvas 示例
 
 ## 许可证
 
-- 示例代码采用 [MIT License](./CODE_LICENSE.md)。
+- 示例代码采用 [MIT License](./CODE_LICENSE.md)，并包含状态专属速度与过渡播放逻辑。
 - 文档采用 [CC BY 4.0](./LICENSE)。
 - 《探险活宝》角色和相关美术素材不包含在上述许可证中。
 
