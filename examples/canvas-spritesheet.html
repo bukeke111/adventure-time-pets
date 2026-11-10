@@ -8,25 +8,47 @@
     :root { color-scheme: dark; font-family: system-ui, sans-serif; }
     body { margin: 2rem; background: #171321; color: #f4efff; }
     canvas { width: 384px; height: 416px; image-rendering: pixelated; border: 1px solid #5f5272; }
+    .controls { display: flex; flex-wrap: wrap; gap: 0.5rem; max-width: 42rem; }
+    button { border: 1px solid #6d5b85; border-radius: 0.4rem; padding: 0.45rem 0.7rem; background: #2b2138; color: #f4efff; cursor: pointer; }
+    button:hover { background: #3b2b4d; }
     .note { max-width: 42rem; color: #c8bfd8; }
+    #state { color: #c4b5fd; }
   </style>
 </head>
 <body>
   <h1>Canvas 精灵图示例</h1>
-  <p class="note">替换图片路径后，Canvas 使用源图中的 192×208 单元格绘制当前帧。</p>
+  <p class="note">Canvas 示例根据状态帧数和状态专属速度播放动画，并保留 192×208 的绘制尺寸。</p>
   <canvas width="192" height="208" aria-label="Pixel Trio sprite cell"></canvas>
-  <script>
+  <p>当前状态：<strong id="state">idle</strong></p>
+  <div class="controls" aria-label="Animation states"></div>
+  <script type="module">
+    import { animationStates, createSpritePlayer } from './state-player.js';
+
     const canvas = document.querySelector('canvas');
-    const ctx = canvas.getContext('2d');
+    const context = canvas.getContext('2d');
+    const stateLabel = document.querySelector('#state');
+    const controls = document.querySelector('.controls');
     const image = new Image();
     image.src = '../assets/pixel-trio-spritesheet.png';
+
     image.onload = () => {
-      let frame = 0;
-      setInterval(() => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(image, (frame % 6) * 192, 0, 192, 208, 0, 0, 192, 208);
-        frame += 1;
-      }, 160);
+      const player = createSpritePlayer({
+        drawFrame: (state, frame) => {
+          context.clearRect(0, 0, canvas.width, canvas.height);
+          context.drawImage(image, frame * 192, state.row * 208, 192, 208, 0, 0, 192, 208);
+        },
+        onStateChange: (state) => {
+          stateLabel.textContent = state;
+        }
+      });
+
+      for (const stateName of Object.keys(animationStates)) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.textContent = stateName;
+        button.addEventListener('click', () => player.playTransition(stateName));
+        controls.append(button);
+      }
     };
   </script>
 </body>
