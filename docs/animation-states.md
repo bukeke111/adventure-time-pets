@@ -18,7 +18,7 @@ The current Codex pet atlas uses 8 columns and 9 rows. Rows are read from top to
 
 Use a fixed cell size of 192 × 208 pixels. Advance frames from left to right within one row, then loop the row. Keep the same scale and baseline across frames to avoid visual popping. A state change should switch rows while preserving the current display scale.
 
-The public GIF preview shows the six-frame `idle` row at half cell size. The complete character atlas remains outside the public repository because it contains third-party characters and artwork.
+The public GIF preview shows the six-frame `idle` row at half cell size. The complete character atlas is published at `assets/pixel-trio-spritesheet.png`. It contains third-party characters and artwork, so the repository rights notice still applies.
 
 ## Optimized playback
 
@@ -33,3 +33,19 @@ The browser examples use state-specific frame timing instead of one global inter
 | `failed`, `review` | 260 ms |
 
 Recommended transition paths are `idle → waving → running`, `running → waiting`, `running → review`, `review → jumping → idle`, and `running → failed → idle`. The shared player in `examples/state-player.js` keeps frame counters within the active row and resets the frame index when a state changes.
+
+## State previews
+
+Open each GIF to inspect the corresponding sequence:
+
+| State | Preview |
+| --- | --- |
+| `idle` | [idle.gif](../preview/states/idle.gif) |
+| `running-right` | [running-right.gif](../preview/states/running-right.gif) |
+| `running-left` | [running-left.gif](../preview/states/running-left.gif) |
+| `waving` | [waving.gif](../preview/states/waving.gif) |
+| `jumping` | [jumping.gif](../preview/states/jumping.gif) |
+| `failed` | [failed.gif](../preview/states/failed.gif) |
+| `waiting` | [waiting.gif](../preview/states/waiting.gif) |
+| `running` | [running.gif](../preview/states/running.gif) |
+| `review` | [review.gif](../preview/states/review.gif) |
